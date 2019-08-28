@@ -31,6 +31,8 @@ socket.on('connect',()=>{
         data.macA = macA
         socket.emit('initPerfData',data)
         // console.log('data',data);
+    }).catch(err=>{
+            
     })
 
     let perfDataInterval = setInterval(()=>{
@@ -38,6 +40,9 @@ socket.on('connect',()=>{
             perfData.macA = macA;
             socket.emit('perfData',perfData);
             // console.log('perfData',perfData)
+        })
+        .catch(err=>{
+
         })
     },300)
 //at every reboot the on.connect is called again and the set interval is set again,
@@ -59,7 +64,7 @@ function performanceData() {
             const usedMem = totalMem - freeMem;
             const memUsage = Math.floor(usedMem/totalMem*100)/100;
 // The os.type() method returns a string identifying the operating system name as returned by uname(3). For example, 'Linux' on Linux, 'Darwin' on macOS, and 'Windows_NT' on Windows.
-            const osType = os.type();
+            var osType = os.type();
             if(os.type() == 'Darwin' ) osType = 'Mac';
             if(os.type() == "Windows_NT") osType = 'Windows';
             

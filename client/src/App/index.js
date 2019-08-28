@@ -30,7 +30,7 @@ class App extends Component {
                 <Switch>
                     {/* auth routes */}
                     {auth}
-                    <Route path="/" component={MainLayout} />
+                    <Route exact path="/" component={MainLayout} />
                 </Switch>
             </Suspense>
         </ScrollToTop>)

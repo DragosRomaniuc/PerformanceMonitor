@@ -212,6 +212,7 @@ export default function Album(props) {
           </Grid>
         </Container>
       </main>
+
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">

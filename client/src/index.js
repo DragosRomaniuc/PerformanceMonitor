@@ -11,7 +11,7 @@ import store from './Store/store';
 
 const app = (
     <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename="/">
             <App/>
         </BrowserRouter>
     </Provider>

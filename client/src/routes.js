@@ -12,6 +12,10 @@ const mainLayoutRoutes = {
     DashboardDefault: React.lazy(() => import('./App/layout/MainLayout/MainLayout'))
 }
 
+// const allRoutes = {
+//     // LearnBootstrap: React.lazy(()=>import('./App/layout/LearnBootstrap/LearnBootstrap'))
+// }
+
 
 // To Export
 const routes = {
@@ -22,6 +26,9 @@ const routes = {
     mainLayout: [
         { path: '/', exact: true, name: 'Default', component: mainLayoutRoutes.DashboardDefault }
     ]
+    // learnBootstrap: [
+    //     { path: '/', exact: true, name: 'Default', component: allRoutes.LearnBootstrap }
+    // ]
 }
 
 export default routes;
